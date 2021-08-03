@@ -1,0 +1,37 @@
+[package]
+name = "rosolio"
+version = "0.1.0"
+edition = "2018"
+authors = ["songww <sww4718168@163.com>"]
+description = "librosa reimplamented in rust."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+combine = "4.5"
+lalrpop-util = "0.19"
+nom = "6.1"
+once_cell = "1.8"
+peg = "0.7"
+pest = "2.1"
+pest_derive = "2.1"
+pom = "3.2"
+regex = "1.5"
+
+[build-dependencies]
+lalrpop = "0.19"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "regex_parse"
+harness = false
+
+[[bench]]
+name = "pest_parse"
+harness = false
+
+[[bench]]
+name = "nom_parse"
+harness = false
